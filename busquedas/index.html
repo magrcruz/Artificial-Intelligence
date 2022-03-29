@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./inspector.css">
+    </head>
+    <style>
+    .sdtitle {
+        text-align: center;
+        font-family: Lucida Console;
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <body>
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+            <h3 class="w3-bar-item sdtitle">Menu</h3>
+            <ul class="ul-vertical">
+                <li class="w3-bar-item">Grafo</li>
+                <li class="w3-bar-item"><button id="comenzar" class="button-6" role="button">Crear Grafo</button></li>
+                <li class="w3-bar-item"><button id="sin_caminos" class="button-6" role="button">Borrar caminos</button></li>
+                <li class="w3-bar-item ">Eliminar porcentaje de vértices</li>
+                
+                <div >
+                    <li class="w3-bar-item" style="flex: 0.5;" >
+                        <input style="display:inline" class="button-6 " type="number" id="porcentaje" name="porcentaje" min="0" max="100" value="50">
+                        <button style="display:inline" id="eliminar_porcentaje" class="button-6" role="button">Borrar</button>
+                        <label class="switch" >
+
+                    </li>
+                    <!-- Rectangular switch -->
+
+                </div>
+                <li class="w3-bar-item ">Seleccionar vértices</li>
+                <div >
+                    <li class="w3-bar-item" style="flex: 0.5;" >
+                        <button style="display:inline" class="button-6 " id="seleccionarInicio">Inicio</button>
+                        <button style="display:inline" id="seleccionarFin" class="button-6" role="button">Final</button>
+                        <button style="display:inline" id="borrando" class="button-6" role="button">Borrar</button>
+
+                    </li>
+
+                </div>
+
+                <li class="w3-bar-item ">Delay</li>
+                <li class="w3-bar-item"><input class="" type="range" id="delay" name="delay" min="0" max="100" value="0"></li>
+
+                <li class="w3-bar-item">Busquedas</li>
+                <li class="w3-bar-item">Ciegas</li>
+                <li class="w3-bar-item" style="display:inline">
+                    <button id="dfs" class="button-6" role="button" style="display:inline" >DFS</button>
+                    <button id="bfs" class="button-6" role="button" style="display:inline">BFS</button>
+                </li>
+                <li class="w3-bar-item">Heuristicas</li>
+                <li class="w3-bar-item" style="">
+                    <button style="" id="mejor_el_primero" class="button-6" role="button">Best First</button></li>
+                    <button style="display:inline" id="hill_climbing" class="button-6" role="button">Hill Climbing</button></li>
+                    <button style="display:inline" id="a_star" class="button-6" role="button">A*</button>
+                </li>  
+                
+            
+            </ul>                                  
+        </div>
+       
+        <!-- Page Content -->
+        <div style="margin-left:25%" >
+            <div class="w3-container w3-teal">
+                <h1 class="w3-bar-item">BÚSQUEDAS CIEGAS Y HEURÍSTICAS</h1>
+            </div>
+            <div id="matrix" class=""></div>
+       
+        </div>
+        
+   </body>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="interfaz.js"></script>
+    <script src="grafo.js"></script>
+    <script src="index.js"></script>
+</html>
