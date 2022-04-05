@@ -1,0 +1,10 @@
+^D:\2022-1\IA\MINMAXINTERFAZ\BUILD\CMAKEFILES\55C1BDD86D09D13DE93B033B768C26E3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/2022-1/IA/MInMaxInterfaz -BD:/2022-1/IA/MInMaxInterfaz/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/2022-1/IA/MInMaxInterfaz/build/MinMax.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
